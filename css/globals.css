@@ -1,0 +1,126 @@
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*Регулирует размеры и отступы, т.е. позволяет браузеру правильно считывать логику (400px значение бокса + 20px отступ =
+    380px внутреннее содержание контента бокса и 20px отступа.*/
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-family: inherit; /*inherit нужен чтобы присвоить значение от родительского элемента, плюс это необходимо прописывать в начале каждого css*/
+}
+
+button {
+    display: inline-block; /*display: inline-block нужен на линейных элементах, нужен чтобы аттрибуты css блочных элементов правильно работали на 
+    линейных элементов*/
+}
+
+/* Если не указать для input, textarea, button аттрибут font-family: inherit то они не примут стиль текста от body */
+
+a, a:hover{
+    text-decoration: none; /*Делает так чтобы после наведения не подчеркивалась ссылка (не появлялась нижняя полоса под ссылкой)*/
+    color: #000;/*Не позволяет менять цвет ссылки при наведения и после нажатия*/
+}
+
+img {
+    display: block; /*Преобразует тип img в Блочный элемент*/
+    width: 100%; /*Позволяет всегда брать значение от своего родителя то есть 100% ширины от родительского блока*/
+    height: auto;
+}
+
+.body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.section-header{
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.section-header > * + * {
+    margin-top: 24px;
+}
+
+.product-wrapper {
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 40px;
+    justify-content: center;
+}
+
+.product {
+    width: 270px;
+    height: 400px;
+    text-align: center;
+}
+
+.text {
+    margin-top: 10px;
+}
+
+.old-price {
+    color: gray;
+    text-decoration-line: line-through;
+}
+
+.new-price {
+    color: red;
+    margin: 0;
+    font-weight: 500    ;
+}
+
+.button {
+    color: rgb(161, 159, 159);  
+    padding: 16px 28px;
+    border: 3px solid rgb(255, 177, 190);
+    margin-bottom: 24px;
+}
+
+.button:hover {
+    scale: 1.1;
+    transition: 0.6;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.footer-link{
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 24px;
+}
+
+.footer-link:hover {
+    color: tan;
+}
+
+.footer-link:last-child {
+    margin-right: 0;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-link {
+    margin: 24px 8px;
+}
+
+.icon-link img:hover {
+    scale: 1.2;
+    transition: 0.4s;
+}
