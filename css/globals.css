@@ -73,6 +73,11 @@ img {
     text-align: center;
 }
 
+.product-image {
+    height: 330px;
+    overflow: hidden;
+}
+
 .old-price {
     color: #999999;
     margin-right: 5px;
